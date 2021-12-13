@@ -1,0 +1,60 @@
+.services-page {
+    background-color: rgb(235, 235, 235);
+ }
+
+ .services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+ 
+    }
+
+ #service {
+ font-family: 'Open Sans',Arial,sans-serif;
+  margin-top: 0;
+  padding-top: 50px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+ }
+
+ 
+
+ .round {
+    border-radius: 50%;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+    width: 11em;
+    height: 11em;
+    line-height: 10em;
+    vertical-align: middle;
+ }
+
+ .info {
+    padding: 0 20px 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+ 
+.service-info {
+
+ flex: 0 0 200px;
+ margin: 10px;
+ border: 1px solid #ccc;
+
+}
+
+.text > p {
+  text-align: center;
+}
+
+.text > h4 {
+ text-align: center;
+ text-transform: uppercase;
+}

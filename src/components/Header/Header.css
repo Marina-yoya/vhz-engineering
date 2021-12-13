@@ -1,0 +1,53 @@
+
+#mainNav #top-menu {
+    order: 2;
+    place-content: center flex-end;
+    align-items: center;
+    flex-basis: auto;
+    flex-grow: 1;
+    display: flex !important;
+ }
+ 
+ * {
+    box-sizing: border-box;
+ }
+ .site-container{
+    order: 1;
+    display: flex;
+    position: relative;
+ 
+    place-content: center flex-start;
+    align-items: center;
+    flex-basis: auto;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 27px;
+     letter-spacing: 2px;
+     word-spacing: 0px;
+ }
+ 
+ 
+ 
+ #mainNav {
+    font-family: "Open Sans", Arial, sans-serif;
+    z-index: 3000;
+    padding: 20px;
+    background-color: rgb(48, 56, 65);
+    color: rgb(234, 235, 236);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+ }
+ 
+ 
+ .nav-pages {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    position: absolute;
+ }
+ .module-menu {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    color: rgb(11, 23, 36) !important;
+ }
