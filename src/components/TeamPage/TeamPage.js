@@ -1,36 +1,45 @@
 import './TeamPage.css'
+import TeamCard from './TeamCard';
 import Person from '../../assets/person.jpg';
-const TeamPage = () => {
+
+const person = [
+    {
+        id: 1,
+        img: Person,
+        title: "The Boss",
+        description: "He is the best",
+        follow: "https://www.facebook.com/valentin.zaimov.54",
+    },
+    {
+        id: 2,
+        img: Person,
+        title: "The Boss",
+        description: "He is the best",
+        follow: "https://www.facebook.com/valentin.zaimov.54"
+    },
+
+]
 
 
-    
-    
-    return(
+
+
+const TeamPage = (props) => {
+
+
+   
+
+
+    return (
         <div className="team-page">
             <h1 className="team">Team</h1>
             <hr className="small" />
 
             <section className="cards">
-                <form className="card">
-                <img src={Person} alt={"Person"} />
-                    <div className="text">
-                        <h3>The Boss</h3>
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
-                        <button>
-                            <a href="https://www.facebook.com/valentin.zaimov.54">Follow</a>
-                        </button>
-                    </div>
-                </form>
-                <form className="card">
-                    <img src={Person} alt={"Person"}
-                         />
-                    <div className="text">
-                        <h3>Best in className</h3>
-                        <p>Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
-                        <button>Just do it...</button>
-                    </div>
-                </form>
-                </section>
+            {person.map(person => {
+               return <TeamCard key = {person.id} person = {person}  />
+           })}
+
+            </section>
         </div>
     )
 }

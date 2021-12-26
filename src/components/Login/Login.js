@@ -1,7 +1,27 @@
 import './Login.css'
-
-
+import * as authService from '../../services/authService'
+import { useAuthContext } from '../../contexts/AuthContext';
 const Login = () => {
+
+	const {login} = useAuthContext();
+  const onLoginHandler = (e) => {
+	  e.preventDefault();
+	  let formData = new FormData(e.currentTarget);
+	  let email = formData.get('email');
+	  let password = formData.get('password');
+	  
+	  
+	  authService.login(email, password).then((authData) => {
+		login(authData);
+		console.log(authData)
+	})
+	.catch(err => {
+		// TODO: show notification
+		console.log(err);
+	});
+	 
+  }
+
 
     return(
         <>
@@ -11,12 +31,12 @@ const Login = () => {
 		
 		</div>
 		<br />
-		<form className="login">
+		<form className="login" onSubmit={onLoginHandler} method="POST">
 			   <label htmlFor="email">Email</label>
 			   <input type="text" placeholder="email" name="email" /> <br />
 			   <label htmlFor="password">Password</label>
 			   <input type="password" placeholder="*****" name="password" /> <br />
-			   <input type="button" value="Login" />
+			   <input type="submit" value="Login" />
 			
 		</form>
         </>

@@ -5,7 +5,7 @@ const ContactPage = () => {
 
     return(
        <div>
-           AIzaSyDA_f5g-mkY3uSqyd9geDIU7Hfc9xwtZkU
+           
           <h2>contact us</h2>
           <h2>contact us</h2>
           <h2>contact us</h2>

@@ -1,22 +1,20 @@
 
-const ServiceCard = () => {
+const ServiceCard = (props) => {
 
     return(
-        <div className="services-page">
-            <h1 id="service">Services</h1>
-            <hr className="small" />
-            <section className="services">
+        
+            
                 <article className="service-info">
-                    <img className="round" src={ServiceImg} alt={"services"} />
+                    <img className="round" src={props.service.img} alt={"services"} />
                     <div className="text">
-                        <h4>Consulting</h4>
-                        <p>Objectively innovate empowered
-                             manufactured products whereas
-                              parallel platforms.</p>
+                        <h4>{props.service.title}</h4>
+                        <p>{props.service.description}</p>
 
                     </div>
                 </article>
-                </section>
-        </div>
+               
+       
     )
 }
+
+export default ServiceCard;

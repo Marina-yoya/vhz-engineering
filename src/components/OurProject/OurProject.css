@@ -1,0 +1,25 @@
+#project {
+    
+    background-image: url("https://qtxasset.com/fiercebiotech/1637661924/original.png?VersionId=8CdVdrVp6gHBH.oLFA9xcKFDTViqH.nV");
+    background-size: cover;
+  
+     height: 100vh;
+     padding: 1px;
+     position: relative;
+ }
+
+ .text-block {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    margin-right: 1200px;
+    background: rgb(173, 197, 194); /* Fallback color */
+    background: rgba(163, 183, 184, 0.74);
+    /* background-color: black; */
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .map {
+    background-color: rgb(235, 235, 235);
+  }

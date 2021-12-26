@@ -11,9 +11,10 @@ const onLoad = marker => {
   }
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: 52.17468934933358,
+  lng: 0.13496329208894317
 };
+
 
 function MyComponent() {
   return (
