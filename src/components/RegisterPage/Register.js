@@ -1,10 +1,12 @@
 
 import './Register.css';
+import { useHistory } from 'react-router-dom';
 import * as authService from '../../services/authService';
 import { useAuthContext } from '../../contexts/AuthContext';
 
 const Register = () => {
 
+	const history = useHistory();
 	const {login} = useAuthContext();
 	const onRegisterHandler = (e) => {
 		e.preventDefault()
@@ -20,7 +22,7 @@ const Register = () => {
 
 		authService.register(email, password).then(authData => {
 			login(authData);
-			
+			history.push('/')
 			
 		});
 	}

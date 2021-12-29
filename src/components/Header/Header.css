@@ -49,5 +49,9 @@
     display: flex;
     list-style: none;
     padding: 10px;
-    color: rgb(11, 23, 36) !important;
+    color: rgb(234, 235, 236) !important;
+ }
+
+ .nav-menu{
+    color: rgb(234, 235, 236) !important;
  }

@@ -13,7 +13,7 @@ const OurProject = () => {
 
                 <div className="project-img"></div>
             </div>
-            <div class="text-block">
+            <div className="text-block">
                 <h4>Where science thrives</h4>
                 <p>The Discovery Centre
                     (DISC) in Cambridge, UK,

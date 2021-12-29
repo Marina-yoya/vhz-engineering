@@ -5,16 +5,16 @@ import { useAuthContext } from '../../contexts/AuthContext';
 const Header = () => {
 
     const { user } = useAuthContext();
-    console.log(user, 'here')
+
 
     let guestNav = (
 
         <>
             <li className="module-menu">
-                <Link to="/login">LOGIN</Link>
+                <Link to="/login" className="nav-menu">LOGIN</Link>
             </li>
             <li className="module-menu">
-                <Link to="/register">REGISTER</Link>
+                <Link to="/register" className="nav-menu">REGISTER</Link>
             </li>
         </>
     )
@@ -23,17 +23,18 @@ const Header = () => {
         <>
 
             <li className="module-menu">
-                <Link to="/service">SERVICES</Link>
-            </li>
-            <li className="module-menu">
-                <Link to="/team">TEAM</Link>
-            </li>
-            <li className="module-menu">
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/service" className="nav-menu">SERVICES</Link>
             </li>
 
             <li className="module-menu">
-                <Link to="/logout">LOGOUT</Link>
+                <Link to="/create-team" className="nav-menu">CREATE TEAM</Link>
+            </li>
+            <li className="module-menu">
+                <Link to="/my-team" className="nav-menu">MY TEAM</Link>
+            </li>
+
+            <li className="module-menu">
+                <Link to="/logout" className="nav-menu">LOGOUT</Link>
             </li>
         </>
     )
@@ -41,39 +42,27 @@ const Header = () => {
     return (
         <header>
             <nav id="mainNav">
-                <div className="site-container">VHZ Engineering {user.email}</div>
+                <div className="site-container">VHZ Engineering 
+                <span className='userName'>Welcome {user.email}</span>
+                </div>
                 <div id="top-menu">
                     <ul className="nav-pages">
                         <li className="module-menu">
-                            <Link to="/">HOME</Link>
+                            <Link to="/" className="nav-menu" >HOME</Link>
+                        </li>
+                        <li className="module-menu ">
+                            <Link to="/about" className="nav-menu">ABOUT</Link>
                         </li>
                         <li className="module-menu">
-                            <Link to="/about">ABOUT</Link>
+                            <Link to="/our-project" className="nav-menu">OUR PROJECT</Link>
                         </li>
                         <li className="module-menu">
-                            <Link to="/our-project">Our Project</Link>
+                            <Link to="/team" className="nav-menu">TEAM</Link>
                         </li>
                         {user.email
                             ? userNav
                             : guestNav}
-                        {/* <li className="module-menu">
-                    <Link to="/service">SERVICES</Link>
-                </li>
-                <li className="module-menu">
-                    <Link to="/team">TEAM</Link>
-                </li>
-                <li className="module-menu">
-                    <Link to="/contact">CONTACT</Link>
-                </li>
-                <li className="module-menu">
-                    <Link to="/login">LOGIN</Link>
-                </li>
-                <li className="module-menu">
-                   <Link to="/register">REGISTER</Link>
-                </li>
-                <li className="module-menu">
-                   <Link to="/logout">LOGOUT</Link>
-                </li> */}
+
                     </ul>
                 </div>
             </nav>

@@ -1,21 +1,48 @@
 import './TeamPage.css'
+import { useAuthContext } from '../../contexts/AuthContext';
 import TeamCard from './TeamCard';
 import Person from '../../assets/person.jpg';
 
-const person = [
+export const person = [
     {
-        id: 1,
+        _id: 1,
         img: Person,
-        title: "The Boss",
-        description: "He is the best",
+        title: "Valentin Zaimov",
+        description: "Company Director",
         follow: "https://www.facebook.com/valentin.zaimov.54",
+        likes:[]
     },
     {
-        id: 2,
+        _id: 2,
         img: Person,
-        title: "The Boss",
-        description: "He is the best",
-        follow: "https://www.facebook.com/valentin.zaimov.54"
+        title: "Stoyan Ivanov",
+        description: "Electrician",
+        follow: "https://www.facebook.com/valentin.zaimov.54",
+        likes:[],
+    },
+    {
+        _id: 3,
+        img: Person,
+        title: "Iliyan Marinov",
+        description: "Electrician mate",
+        follow: "https://www.facebook.com/valentin.zaimov.54",
+        likes:[],
+    },
+    {
+        _id: 4,
+        img: Person,
+        title: "Dimitar Dimitrov",
+        description: "Electrician mate",
+        follow: "https://www.facebook.com/valentin.zaimov.54",
+        likes:[],
+    },
+    {
+        _id: 5,
+        img: Person,
+        title: "Lubomir Karipov",
+        description: "Electrician mate",
+        follow: "https://www.facebook.com/valentin.zaimov.54",
+        likes:[],
     },
 
 ]
@@ -25,7 +52,9 @@ const person = [
 
 const TeamPage = (props) => {
 
-
+    const {user} = useAuthContext();
+  
+    
    
 
 
@@ -36,8 +65,9 @@ const TeamPage = (props) => {
 
             <section className="cards">
             {person.map(person => {
-               return <TeamCard key = {person.id} person = {person}  />
+               return <TeamCard key = {person._id} person = {person} user = {user} />
            })}
+
 
             </section>
         </div>

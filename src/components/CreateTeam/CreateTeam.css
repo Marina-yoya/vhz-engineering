@@ -1,0 +1,49 @@
+/* 
+
+.create-img {
+    position: absolute;
+	top: 72px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+   
+	background-image: url(../../assets/services1.jpg);
+	
+	background-size: cover;
+	
+	z-index: 0;
+} */
+.create-img {
+    /* position: absolute;
+	top: 72px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+   
+	background-image: url(../../assets/services1.jpg);
+	
+	background-size: 100vw 100vh;
+	
+	z-index: 0; */
+
+    position: absolute;
+	top: 72px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(../../assets/services1.jpg);
+	
+	background-size: cover;
+	
+	z-index: 0;
+}
+
+.create{
+    position: absolute;
+}

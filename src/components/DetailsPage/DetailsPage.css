@@ -1,0 +1,21 @@
+.here {
+    color: red;
+}
+
+.details-btn {
+    display: flex;
+}
+.button {
+    padding: 8px;
+    border: 3px solid rgba(211, 199, 199, 0.6);
+    border-radius: 3px;
+    background: gray;
+}
+
+.dbtn {
+    border: 3px solid rgba(211, 199, 199, 0.6);
+    border-radius: 3px;
+    background: gray;
+    padding: 7px;
+    margin-left: 8px;
+}

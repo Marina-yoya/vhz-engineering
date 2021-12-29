@@ -1,10 +1,12 @@
 import './Login.css'
+import { useHistory } from 'react-router-dom';
 import * as authService from '../../services/authService'
 import { useAuthContext } from '../../contexts/AuthContext';
 const Login = () => {
 
+	const history = useHistory();
 	const {login} = useAuthContext();
-  const onLoginHandler = (e) => {
+      const onLoginHandler = (e) => {
 	  e.preventDefault();
 	  let formData = new FormData(e.currentTarget);
 	  let email = formData.get('email');
@@ -13,10 +15,11 @@ const Login = () => {
 	  
 	  authService.login(email, password).then((authData) => {
 		login(authData);
-		console.log(authData)
+		
+		history.push('/')
 	})
 	.catch(err => {
-		// TODO: show notification
+		
 		console.log(err);
 	});
 	 

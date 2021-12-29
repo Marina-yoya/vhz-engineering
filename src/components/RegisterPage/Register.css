@@ -19,7 +19,7 @@
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url(https://media.istockphoto.com/photos/blue-plasma-lightning-abstract-electrical-background-picture-id907776108?k=20&m=907776108&s=170667a&w=0&h=K6R_OWmDKQm3_SmEApBaw5toZzAxmSC61DlyzcrELe8=);
+	/* background-image: url(https://media.istockphoto.com/photos/blue-plasma-lightning-abstract-electrical-background-picture-id907776108?k=20&m=907776108&s=170667a&w=0&h=K6R_OWmDKQm3_SmEApBaw5toZzAxmSC61DlyzcrELe8=); */
 	background-size: cover;
 	
 	z-index: 0;
@@ -60,12 +60,12 @@
 
 .login{
 	position: absolute;
-	top: calc(50% - 75px);
+	/* top: calc(50% - 75px);
 	left: calc(50% - 50px);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
-	z-index: 2;
+	z-index: 2; */
   color: grey;
 }
 
